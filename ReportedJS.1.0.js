@@ -4,7 +4,19 @@
  * @name  reportedJS 1.0
  * @description 可用于业务在线时长（PCU）等数据上报需求 【统计上报】 -- reportedJS
  * -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- * 
+ * 1、本组件用于将拼装好的上报 URL 进行上报
+ *
+ * 2、初始化方法，
+ *  1）提供 var dr = new dataReported() 构造函数，构建 dataReported 变量
+ *  2）直接 dataReported().methodName 进行调用
+ *
+ * 3、提供一些工具方法
+ * 	setCookie -- 设置 cookie
+ * 	getCookie -- 获取 cookie
+ * 	hexMd5 -- MD5 加密函数
+ * 	createRandomString -- 生成任意位数随机字符串
+ * 	intervalReported -- 间隔固定时长上报
+ * 	leaveLintener -- 离开浏览器上报
  */
 ;
 (function(window, undefined) {
@@ -316,7 +328,7 @@
 		// @param:str 加密字符串
 		// @param:digit 加密位数,默认 密文为 16 位，
 		// digit 为 32，则密文为 32 位
-		md5Hex: function(str, digit) {
+		hexMd5: function(str, digit) {
 			var length = arguments.length;
 
 			if (length == 0) {
