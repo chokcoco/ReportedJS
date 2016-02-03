@@ -358,7 +358,7 @@
 
 			if (length == 2) {
 				setCookie(name, value, "d30");
-			} else if (length == 2) {
+			} else if (length == 3) {
 				setCookie(name, value, time);
 			}
 
