@@ -17,6 +17,7 @@
  * 	createRandomString -- 生成任意位数随机字符串
  * 	intervalReported -- 间隔固定时长上报
  * 	leaveLintener -- 离开浏览器上报
+ * 	stayTime -- 在页面内的停留时间
  */
 ;
 (function(window, undefined) {
@@ -271,7 +272,7 @@
 		}
 	}
 
-	var // 记录频道的时间
+	var // 记录进入网页的时间
 		startTime = new Date(),
 
 		// 心跳上报 setIntervalReported	
