@@ -7,7 +7,7 @@
  * 1、本组件用于将拼装好的上报 URL 进行上报
  *
  * 2、初始化方法，
- *  1）提供 var dr = new dataReported() 构造函数，构建 dataReported 变量
+ *  1）提供 var dr = new dataReported() 构造函数，构建 dataReported 实例
  *  2）直接 dataReported().methodName 进行调用
  *
  * 3、提供一些工具方法
