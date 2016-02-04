@@ -240,15 +240,25 @@
 	// h是指小时，h12 是代表 12 小时
 	// d是天数，d30 是代表 30 天
 	function getSecond(str) {
+		if (!str) {
+			return;
+		}
+
 		var str1 = str.substring(1, str.length) * 1,
 			str2 = str.substring(0, 1);
 
-		if (str2 == "s") {
-			return str1 * 1000;
-		} else if (str2 == "h") {
-			return str1 * 60 * 60 * 1000;
-		} else if (str2 == "d") {
-			return str1 * 24 * 60 * 60 * 1000;
+		switch (str2) {
+			case "s":
+				return str1 * 1000;
+				break;
+			case "h":
+				return str1 * 60 * 60 * 1000;
+				break;
+			case "d":
+				return str1 * 24 * 60 * 60 * 1000;
+				break;
+			default:
+				return 30 * 24 * 60 * 60 * 1000;
 		}
 	}
 
@@ -272,8 +282,8 @@
 		}
 	}
 
-	var 
-		// 记录进入网页的时间
+	var
+	// 记录进入网页的时间
 		startTime = new Date(),
 
 		// 心跳上报 setIntervalReported	
