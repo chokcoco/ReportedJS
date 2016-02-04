@@ -272,7 +272,8 @@
 		}
 	}
 
-	var // 记录进入网页的时间
+	var 
+		// 记录进入网页的时间
 		startTime = new Date(),
 
 		// 心跳上报 setIntervalReported	
@@ -283,10 +284,13 @@
 
 		// 初始化方法
 		dataReported = function(options) {
-			return dataReported.prototype.init(options);
+			return new dataReported.prototype.init(options);
 		};
 
 	dataReported.prototype = {
+		// 构造函数
+		constructor: dataReported,
+
 		// 上报方法
 		// path 的组成由一个 1px*1px 的 gif 图路径，带上上报参数 
 		// example:path = http://dataaq.yy.com/d.gif?sed=7b787ece5e314406&te=2&rl=conjs&td=null&ip=null&sd=47171833&sbd=47171833&ud=null&ot=1454469970&dr=0&wy=bd150b15a3eb43f995b7612aa785bf03&rf=http%3A%2F%2Fconcert.m.yy.com%2F&sr=wch_live&cd=null&ui=0.6382519796025008&in=null
@@ -369,6 +373,7 @@
 			getCookie(name);
 		},
 		// 监听用户离开网页事件
+		// 并发送上报
 		leaveLintener: function(path) {
 			var _this = this;
 
