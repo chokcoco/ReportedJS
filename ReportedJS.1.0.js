@@ -1,7 +1,7 @@
 /**
  * @author Coco 
  * QQ:308695699
- * @name  reportedJS 1.0
+ * @name  reportedJS 1.0.0
  * @description 可用于业务在线时长（PCU）等数据上报需求 【统计上报】 -- reportedJS
  * -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  * 1、本组件用于将拼装好的上报 URL 进行上报
