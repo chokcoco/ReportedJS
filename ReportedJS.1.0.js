@@ -10,14 +10,17 @@
  *  1）提供 var dr = new dataReported() 构造函数，构建 dataReported 实例
  *  2）直接 dataReported().methodName 进行调用
  *
- * 3、提供一些工具方法
+ * 3、核心方法
+ *  reportSend -- 用于上报 url
+ * 	intervalReported -- 间隔固定时长上报（心跳上报）
+ * 	leaveLintener -- 离开浏览器上报 
+ * 
+ * 4、提供一些工具方法
  * 	setCookie -- 设置 cookie
  * 	getCookie -- 获取 cookie
  * 	hexMd5 -- MD5 加密函数
  * 	createRandomString -- 生成任意位数随机字符串
- * 	intervalReported -- 间隔固定时长上报
- * 	leaveLintener -- 离开浏览器上报
- * 	stayTime -- 在页面内的停留时间
+ * 	stayTime -- 获取在页面内的停留时间
  */
 ;
 (function(window, undefined) {
