@@ -24,7 +24,7 @@
 
 	// md5 加密
 	// hex_md5("") -- 16位加密
-	// hex_md5("",32) -- 32位加密
+	// hex_md5("", 32) -- 32位加密
 	var hex_md5 = function(sMessage, bit) {
 		function RotateLeft(lValue, iShiftBits) {
 			return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
@@ -310,6 +310,7 @@
 			try {
 				img.src = path;
 			} catch (err) {} finally {
+				// IE 下防止内存泄漏
 				img = null;
 			}
 		},
